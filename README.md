@@ -1,5 +1,5 @@
 # Taller Unidad 4 — APIs Públicas, MongoDB y EDA
-**Curso:** Bases de Datos para Ciencia de Datos — Universidad de Antioquia  
+**Curso:** Bases de Datos — Universidad de Antioquia  
 **Docente:** Miguel Ramos García
 
 ---
