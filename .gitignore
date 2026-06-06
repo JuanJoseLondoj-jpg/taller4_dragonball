@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Imágenes generadas
+*.png
+*.jpg
+
+# Datos y credenciales
+*.csv
+*.json
+secrets.py
+config.py
+
+# IDEs
+.vscode/
+.idea/
+*.swp
