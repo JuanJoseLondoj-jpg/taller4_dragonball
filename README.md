@@ -18,10 +18,16 @@ Este proyecto simula un flujo real de Ciencia de Datos en tres fases:
 
 **Dragon Ball API** — `https://dragonball-api.com`
 
-Provee información sobre personajes del universo Dragon Ball:  
-nombre, raza, género, afiliación, poder Ki base y Ki máximo.
+Se consumen tres endpoints para superar el mínimo de 100 registros:
 
-Se extraen **más de 100 personajes** mediante paginación automática.
+| Endpoint | Descripción | Registros |
+|---|---|---|
+| `/api/characters` | Personajes del universo Dragon Ball | 58 |
+| `/api/planets` | Planetas del universo Dragon Ball | 20 |
+| `/api/transformations` | Transformaciones de los personajes | 43 |
+| | **Total insertado en MongoDB** | **121** |
+
+El EDA se realiza únicamente sobre los **personajes**, que son los registros con información más completa (raza, género, afiliación, ki).
 
 ---
 
@@ -56,8 +62,8 @@ pip install -r requirements.txt
 python ingesta.py
 ```
 
-Esto descargará todos los personajes disponibles (≥100) y los guardará en:  
-- Base de datos: `taller4_db`  
+Descarga personajes, planetas y transformaciones (121 registros en total) y los guarda en:
+- Base de datos: `taller4_db`
 - Colección: `raw_data`
 
 ### 3. Ejecutar el análisis
@@ -66,13 +72,13 @@ Esto descargará todos los personajes disponibles (≥100) y los guardará en:
 jupyter notebook analisis.ipynb
 ```
 
-Abre el notebook y ejecuta todas las celdas en orden (`Cell > Run All`).
+Abre el notebook y ejecuta todas las celdas con `Cell > Run All`.
 
 ---
 
 ## Resultados del EDA
 
-El análisis genera **3 gráficos** y **5 insights** sobre los personajes:
+El análisis se realiza sobre los 58 personajes y genera **3 gráficos** y **5 insights**:
 
 - Distribución por género (Pie Chart)
 - Top 8 razas más frecuentes (Barras)
